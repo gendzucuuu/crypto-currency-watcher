@@ -12,7 +12,7 @@ import java.math.BigDecimal;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class Cryptocoin {
+public class News {
     @NotBlank
     private String id;
 
