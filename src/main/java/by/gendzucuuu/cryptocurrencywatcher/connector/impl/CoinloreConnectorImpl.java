@@ -21,8 +21,8 @@ public class CoinloreConnectorImpl implements CoinloreConnector {
     private final ObjectMapper objectMapper;
     private final OkHttpClient okHttpClient;
 
-    public CoinloreConnectorImpl(@Value("${coinlore.url}") String BASE_URL, ObjectMapper objectMapper, OkHttpClient okHttpClient) {
-        this.baseUrl = BASE_URL;
+    public CoinloreConnectorImpl(@Value("${coinlore.url}") String baseUrl, ObjectMapper objectMapper, OkHttpClient okHttpClient) {
+        this.baseUrl = baseUrl;
         this.objectMapper = objectMapper;
         this.okHttpClient = okHttpClient;
     }
