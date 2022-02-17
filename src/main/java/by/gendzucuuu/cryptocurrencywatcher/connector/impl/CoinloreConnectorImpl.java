@@ -13,7 +13,10 @@ import okhttp3.ResponseBody;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Stack;
+import java.util.stream.Collectors;
 
 @Component
 public class CoinloreConnectorImpl implements CoinloreConnector {
@@ -50,7 +53,10 @@ public class CoinloreConnectorImpl implements CoinloreConnector {
 
     @Override
     public List<Cryptocoin> getAll(final List<String> ids) {
-        return null;
+          return ids.parallelStream()
+                .map(this::getOne)
+                .toList();
+
     }
 
     private Cryptocoin mapToCryptocoin(final CoinloreInfoResponseDto coinloreInfoResponseDto) {

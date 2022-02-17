@@ -1,0 +1,20 @@
+[
+  {
+    "id": "48543",
+    "symbol": "SOL",
+    "name": "Solana",
+    "nameid": "solana",
+    "rank": 8,
+    "price_usd": "93.61",
+    "percent_change_24h": "-8.67",
+    "percent_change_1h": "-0.51",
+    "percent_change_7d": "-17.08",
+    "market_cap_usd": "28597838170.22",
+    "volume24": "1451049606.52",
+    "volume24_native": "15501372.41",
+    "csupply": "305506950.00",
+    "price_btc": "0.002300",
+    "tsupply": "491561409.22682",
+    "msupply": "21000000"
+  }
+]

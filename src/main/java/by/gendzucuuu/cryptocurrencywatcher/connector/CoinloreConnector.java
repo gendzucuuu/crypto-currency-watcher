@@ -7,7 +7,7 @@ import java.io.IOException;
 import java.util.List;
 
 public interface CoinloreConnector {
-    Cryptocoin getOne(String id) throws IOException;
+    Cryptocoin getOne(String id);
 
     List<Cryptocoin> getAll(List<String> ids);
 }
