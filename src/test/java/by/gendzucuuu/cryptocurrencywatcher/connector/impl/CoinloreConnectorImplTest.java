@@ -42,7 +42,7 @@ class CoinloreConnectorImplTest {
 
     @Test
     void getOne() {
-        String jsonBtc = TestUtils.getJsonAsString("coinlore/connector/findone/btcresponce.json");
+        String jsonBtc = TestUtils.getJsonAsString("coinlore/connector/find_one/btcResponce.json");
 
         MockResponse mockedResponse = new MockResponse()
                 .setBody(jsonBtc) //Sample
@@ -57,11 +57,11 @@ class CoinloreConnectorImplTest {
 
     @Test
     void getAll() {
-        String jsonBtc = TestUtils.getJsonAsString("coinlore/connector/findall/btcresponce.json");
+        String jsonBtc = TestUtils.getJsonAsString("coinlore/connector/find_all/btcResponce.json");
 
-        String jsonEth = TestUtils.getJsonAsString("coinlore/connector/findall/ethresponce.json");
+        String jsonEth = TestUtils.getJsonAsString("coinlore/connector/find_all/ethResponce.json");
 
-        String jsonSol = TestUtils.getJsonAsString("coinlore/connector/findall/solresponce.json");
+        String jsonSol = TestUtils.getJsonAsString("coinlore/connector/find_all/solResponce.json");
 
         Stream.of(jsonBtc, jsonEth, jsonSol)
                 .map(json -> new MockResponse().setBody(json)

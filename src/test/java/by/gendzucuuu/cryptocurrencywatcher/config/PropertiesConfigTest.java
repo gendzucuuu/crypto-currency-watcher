@@ -10,12 +10,12 @@ import org.springframework.test.context.TestPropertySource;
 
 import java.util.List;
 
-@SpringBootTest(classes = CryptocoinConfig.class)
+@SpringBootTest(classes = PropertiesConfig.class)
 @TestPropertySource(value = "classpath:cryptocoin-config-test.yml")
-class CryptocoinConfigTest {
+class PropertiesConfigTest {
 
     @Autowired
-    private CryptocoinConfig config;
+    private PropertiesConfig config;
 
     @Test
     void shouldReturnThreeCryptocoinsFromConfig() {
