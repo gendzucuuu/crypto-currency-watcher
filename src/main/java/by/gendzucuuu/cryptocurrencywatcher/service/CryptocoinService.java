@@ -6,4 +6,6 @@ import java.util.List;
 
 public interface CryptocoinService {
     List<Cryptocoin> getAllCryptocoins();
+
+    List<Cryptocoin> updateAll(List<Cryptocoin> cryptocoins);
 }

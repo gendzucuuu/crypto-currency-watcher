@@ -1,0 +1,20 @@
+[
+  {
+    "id": "80",
+    "symbol": "ETH",
+    "name": "Ethereum",
+    "nameid": "ethereum",
+    "rank": 2,
+    "price_usd": "2876.58",
+    "percent_change_24h": "-8.61",
+    "percent_change_1h": "-0.55",
+    "percent_change_7d": "-10.12",
+    "market_cap_usd": "343463060972.57",
+    "volume24": "22145123613.17",
+    "volume24_native": "7698422.16",
+    "csupply": "119399814.00",
+    "price_btc": "0.070849",
+    "tsupply": "119399814",
+    "msupply": ""
+  }
+]

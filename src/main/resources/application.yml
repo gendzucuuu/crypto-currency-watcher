@@ -9,3 +9,24 @@ config:
     -
       id: 48543
       symbol: SOL
+
+coinlore:
+  url: https://api.coinlore.net/api/ticker/
+spring:
+  liquibase:
+    enabled: true
+    change-log: classpath:db/changelog/db.changelog-master.yaml
+  datasource:
+    url: jdbc:h2:file:./myDB
+    username: u
+    password: 1
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: none
+
+
+
+
+
+

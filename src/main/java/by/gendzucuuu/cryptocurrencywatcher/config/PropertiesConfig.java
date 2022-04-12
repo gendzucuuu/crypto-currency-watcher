@@ -14,7 +14,7 @@ import java.util.List;
 @Configuration
 @ConfigurationProperties(prefix = "config")
 @EnableConfigurationProperties
-public class CryptocoinConfig {
+public class PropertiesConfig {
 
     @Getter
     @Setter

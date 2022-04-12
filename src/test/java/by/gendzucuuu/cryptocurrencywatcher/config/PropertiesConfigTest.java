@@ -1,6 +1,7 @@
 package by.gendzucuuu.cryptocurrencywatcher.config;
 
 import by.gendzucuuu.cryptocurrencywatcher.model.Cryptocoin;
+import org.jetbrains.annotations.NotNull;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,21 +10,30 @@ import org.springframework.test.context.TestPropertySource;
 
 import java.util.List;
 
-@SpringBootTest(classes = CryptocoinConfig.class)
+@SpringBootTest(classes = PropertiesConfig.class)
 @TestPropertySource(value = "classpath:cryptocoin-config-test.yml")
-class CryptocoinConfigTest {
+class PropertiesConfigTest {
 
     @Autowired
-    private CryptocoinConfig config;
+    private PropertiesConfig config;
 
     @Test
     void shouldReturnThreeCryptocoinsFromConfig() {
         List<Cryptocoin> actualCoins = config.getCryptocoins();
         Assertions.assertEquals(List.of(
-                new Cryptocoin("90", "BTC"),
-                new Cryptocoin("80", "ETH"),
-                new Cryptocoin("48543", "SOL")),
+                        getCryptocoin("90", "BTC"),
+                        getCryptocoin("80", "ETH"),
+                        getCryptocoin("48543", "SOL")),
                 actualCoins);
 
     }
+
+    @NotNull
+    private Cryptocoin getCryptocoin(String id, String BTC) {
+        return new Cryptocoin() {{
+            setId(id);
+            setSymbol(BTC);
+        }};
+    }
+
 }
