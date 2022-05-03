@@ -1,0 +1,11 @@
+spring:
+  liquibase:
+    enabled: true
+    change-log: classpath:db/changelog/db.changelog-master.yaml
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    initialize: true
+    url: jdbc:postgresql://localhost:5432/crypto_currency_watcher?currentSchema=db_adapter
+    username: u
+    password: 1
+

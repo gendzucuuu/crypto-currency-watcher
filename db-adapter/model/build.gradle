@@ -1,0 +1,30 @@
+plugins {
+    id 'java'
+}
+
+group 'by.gendzucuuu.crypto.currency.watcher.db.adapter.model'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+repositories {
+    mavenCentral()
+}
+
+repositories {
+    mavenCentral()
+    maven {
+        url 'https://plugins.gradle.org/m2/'
+    }
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.13.2.2'
+
+    compileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.22'
+}
+
+test {
+    useJUnitPlatform()
+}

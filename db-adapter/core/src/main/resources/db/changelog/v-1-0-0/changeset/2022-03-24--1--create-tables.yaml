@@ -1,0 +1,32 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-cryptocoin
+      author: gendzucuuu
+      changes:
+        - tagDatabase:
+            tag: create-cryptocoin-table
+        - sqlFile:
+            dbms:  'postgresql'
+            path: db/changelog/v-1-0-0/sql/createCryptocoinTable.sql
+#            splitStatements:  true
+#            stripComments: true
+      rollback:
+        - sqlFile:
+            dbms: 'postgresql'
+            path: db/changelog/v-1-0-0/sql/dropCryptocoinTable.sql
+
+  - changeSet:
+      id: create-user-cryptocoin
+      author: gendzucuuu
+      changes:
+        - tagDatabase:
+            tag: create-user-cryptocoin-table
+        - sqlFile:
+            dbms: 'postgresql'
+            path: db/changelog/v-1-0-0/sql/createUserCryptocoinTable.sql
+#            splitStatements: true
+#            stripComments: true
+      rollback:
+        - sqlFile:
+            dbms: 'postgresql'
+            path: db/changelog/v-1-0-0/sql/dropUserCryptocoinTable.sql

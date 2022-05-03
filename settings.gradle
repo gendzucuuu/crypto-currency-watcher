@@ -5,3 +5,9 @@ pluginManagement {
     }
 }
 rootProject.name = 'crypto-currency-watcher'
+include 'core-app'
+include 'db-adapter:core'
+include 'db-adapter:model'
+include 'db-adapter:client'
+//findProject(':db-adapter:client')?.name = 'client'
+

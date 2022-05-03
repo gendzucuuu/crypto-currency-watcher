@@ -1,0 +1,12 @@
+version: "3.9"
+services:
+  postgres:
+    image: postgres:latest
+    volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+    environment:
+      POSTGRES_DB: "crypto_currency_watcher"
+      POSTGRES_USER: "u"
+      POSTGRES_PASSWORD: "1"
+    ports:
+      - "5432:5432"

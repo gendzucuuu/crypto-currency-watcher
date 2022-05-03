@@ -1,0 +1,20 @@
+databaseChangeLog:
+  - changeSet:
+      id: update-cryptocoin
+      author: gendzucuuu
+      changes:
+        - tagDatabase:
+            tag: update-cryptocoin-table
+        - sqlFile:
+            dbms:  'postgresql'
+            path: db/changelog/v-1-0-0/sql/updateCryptocoinTable.sql
+
+  - changeSet:
+      id: update-user-cryptocoin
+      author: gendzucuuu
+      changes:
+        - tagDatabase:
+            tag: update-user-cryptocoin-table
+        - sqlFile:
+            dbms: 'postgresql'
+            path: db/changelog/v-1-0-0/sql/updateUserCryptocoinTable.sql

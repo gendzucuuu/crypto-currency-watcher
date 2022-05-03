@@ -1,0 +1,7 @@
+databaseChangeLog:
+#  - includeAll:
+#      path: classpath*:db/changelog/v-1-0-0/changeset
+  - include:
+      file: db/changelog/v-1-0-0/changeset/2022-03-24--1--create-tables.yaml
+  - include:
+      file: db/changelog/v-1-0-0/changeset/2022-03-27--2--update-tables.yaml
